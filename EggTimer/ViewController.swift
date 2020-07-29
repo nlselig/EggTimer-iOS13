@@ -10,9 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var count = 60
+    
+    //dictionary
+    let eggTimes = ["Soft":  5, "Medium": 7, "Hard": 12]
+    
     @IBAction func hardnessSelected(_ sender: UIButton) {
-        print(sender.currentTitle)
+        let hardness = sender.currentTitle! //this will never fail, never be nil
+        let result = eggTimes[hardness]!
+        print(hardness)
+        print(result)
     }
+    
+    
     
 
 }
